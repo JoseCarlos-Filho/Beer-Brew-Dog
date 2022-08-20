@@ -1,0 +1,80 @@
+@import "../../styles/variables.scss";
+
+// SCSS da classe header do componente HeaderPage.js
+.header {
+  height: $header-height;
+  background: $bg-seco;
+  color: $text-seco;
+  position: fixed;
+  z-index: 1000;
+  width: 100%;
+  box-shadow: 0px 1px 5px $color-primary;
+
+  // SCSS da classe header_content do componente HeaderPage.js
+  &__content {
+    max-width: 1920px;
+    margin: 0 auto;
+    padding: 0 $spacing-midle;
+    @include breakpoint(midle) {
+      padding: 0 $spacing-large;
+    }
+    transition: 0.3s ease padding;
+
+    height: 100%;
+    display: flex;
+    align-items: center;
+
+    //todos as divs que estão na classe header_content do componente HeaderPage.js
+    __content > div {
+      flex: 1;
+      white-space: nowrap;
+
+      // enésimo filho da div do componente HeaderPage.js
+      &:nth-child(2) {
+        display: flex;
+        justify-content: center;
+        height: 100%;
+      }
+
+      // ultimo tipo da div do componente HeaderPage.js
+      &:last-of-type {
+        display: flex;
+        justify-content: flex-end;
+      }
+    }
+  }
+}
+
+// SCSS classe logo do componente HeaderPage.js
+// .logo {
+//   font-size: 26px;
+//   font-weight: 700px;
+//   color: $text-seco;
+// }
+
+// // SCSS classe navbar_header do componente HeaderPage.js
+// .navbar__header {
+//   width: 100%;
+//   position: fixed;
+//   background: rgba($bg-seco, 0.8);
+//   text-align: center;
+//   padding: $spacing-midle;
+
+//   // SCSS classe nav_item do componente HeaderPage.js
+//   .nav__item {
+//     display: block;
+//     padding: $spacing-midle;
+
+//     text-decoration: none;
+//     color: inherit;
+
+//     height: 100%;
+
+//     transition: 0.3s ease color;
+
+//     // SCSS efeito hover de seleção da classe nav_item
+//     &:hover {
+//       color: $color-primary;
+//     }
+//   }
+// }
