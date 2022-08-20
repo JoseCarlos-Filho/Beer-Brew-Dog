@@ -1,0 +1,37 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap');
+
+// Fonte base da Page
+$font-base: 'Ubuntu', sans-serif;
+
+// Backgrounds da Page
+$bg-base: rgb(255, 255, 255);
+$bg-seco: rgb(0, 0, 0);
+
+// Color texto
+$text-base: rgb(15, 15, 15);
+$text-seco: rgb(240, 240, 240);
+
+// Color
+$color-primary: rgb(22, 210, 247);
+
+// Espaçamento
+$spacing-small: 8px;
+$spacing-midle: 16px;
+$spacing-large: 32px;
+
+// Altura header
+$header-height: 72px;
+
+// Padrão de tamanhos
+$small: 37.5em;
+$midle: 48em;
+$large: 64em;
+$extra: 75em;
+
+@mixin breakpoint($point) {
+    @if $point == midle {
+        @media (min-width: $midle) {
+            @content;    
+        }
+    }
+}
