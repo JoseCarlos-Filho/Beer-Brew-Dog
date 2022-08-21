@@ -2,6 +2,8 @@
 import React from "react";
 import "./HeaderPage.scss";
 //import styles from "./HeaderPage.scss";
+import { GiHamburgerMenu } from "react-icons/gi";
+//import { BiLogInCircle } from "react-icons/bi";
 
 const HeaderPage = () => {
   return (
@@ -22,16 +24,27 @@ const HeaderPage = () => {
             <a className="nav__item" href={"/"}>
               Contact
             </a>
+            <div className="header__login">
+              <Button />
+            </div>
           </nav>
         </div>
 
         <div>
-          <div className="header__login"></div>
-          <button className="user__login"></button>
+          <div className="header__login">
+            <Button />
+          </div>
+          <button className="user__login">
+            <GiHamburgerMenu />
+          </button>
         </div>
       </div>
     </div>
   );
+};
+
+const Button = () => {
+  return <button className="button">Login</button>;
 };
 
 export default HeaderPage;

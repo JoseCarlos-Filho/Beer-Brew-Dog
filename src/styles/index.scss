@@ -12,3 +12,16 @@ body {
   color: text-base;
   height: 200vh;
 }
+
+button {
+  // default configuration
+  font-family: inherit;
+  outline: none;
+  border: none;
+  background: none;
+  letter-spacing: inherit;
+  color: inherit;
+  font-size: inherit;
+  text-align: inherit;
+  padding: 0;
+}

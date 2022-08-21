@@ -25,7 +25,7 @@
     align-items: center;
 
     //todos as divs que estão na classe header_content do componente HeaderPage.js
-    __content > div {
+    & > div {
       flex: 1;
       white-space: nowrap;
 
@@ -45,36 +45,53 @@
   }
 }
 
-// SCSS classe logo do componente HeaderPage.js
-// .logo {
-//   font-size: 26px;
-//   font-weight: 700px;
-//   color: $text-seco;
-// }
+//SCSS classe logo do componente HeaderPage.js
+.logo {
+  font-size: 26px;
+  font-weight: 700;
+  color: $text-seco;
+}
 
-// // SCSS classe navbar_header do componente HeaderPage.js
-// .navbar__header {
-//   width: 100%;
-//   position: fixed;
-//   background: rgba($bg-seco, 0.8);
-//   text-align: center;
-//   padding: $spacing-midle;
+// SCSS classe navbar_header do componente HeaderPage.js
+.navbar__header {
+  width: 100%;
+  position: fixed;
+  top: $header-height;
+  background: rgba($bg-seco, 0.8);
+  text-align: center;
+  padding: $spacing-midle 0;
 
-//   // SCSS classe nav_item do componente HeaderPage.js
-//   .nav__item {
-//     display: block;
-//     padding: $spacing-midle;
+  // SCSS classe nav_item do componente HeaderPage.js
+  .nav__item {
+    display: block;
+    padding: $spacing-midle;
 
-//     text-decoration: none;
-//     color: inherit;
+    text-decoration: none;
+    color: inherit;
 
-//     height: 100%;
+    height: 100%;
 
-//     transition: 0.3s ease color;
+    transition: 0.3s ease color;
 
-//     // SCSS efeito hover de seleção da classe nav_item
-//     &:hover {
-//       color: $color-primary;
-//     }
-//   }
-// }
+    // SCSS efeito hover de seleção da classe nav_item
+    &:hover {
+      color: $color-primary;
+    }
+  }
+
+  @include breakpoint(midle) {
+    position: static;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    background: initial;
+    width: auto;
+    padding: 0;
+
+    &__item {
+      padding: 0 spacing-large;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+}
