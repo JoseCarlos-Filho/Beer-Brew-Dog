@@ -43,6 +43,23 @@
       }
     }
   }
+
+  .header__button__login {
+    display: none;
+    @include breakpoint(midle) {
+      display: initial;
+    }
+  }
+
+  .toggle__user {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    @include breakpoint(midle) {
+      display: none;
+    }
+  }
 }
 
 //SCSS classe logo do componente HeaderPage.js
@@ -93,5 +110,31 @@
       align-items: center;
       justify-content: center;
     }
+  }
+
+  &__button__login {
+    @include breakpoint(midle) {
+      display: none;
+    }
+    padding: $spacing-midle;
+  }
+}
+
+.button {
+  font--weight: 500;
+  color: $color-primary;
+  border: 2px solid $color-primary;
+  padding: $spacing-small $spacing-large;
+  border-radius: $spacing-small / 2;
+  cursor: pointer;
+
+  box-shadow: 0 0 0.5em 0 $color-primary;
+
+  &:active {
+    transform: scale(0.98);
+    border-radius: 0;
+  }
+  &:hover {
+    box-shadow: 0 0 0.75em 0 $color-primary;
   }
 }

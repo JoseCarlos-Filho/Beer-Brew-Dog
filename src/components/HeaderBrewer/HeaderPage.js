@@ -24,17 +24,17 @@ const HeaderPage = () => {
             <a className="nav__item" href={"/"}>
               Contact
             </a>
-            <div className="header__login">
+            <div className="header__button__login">
               <Button />
             </div>
           </nav>
         </div>
 
         <div>
-          <div className="header__login">
+          <div className="header__button__login">
             <Button />
           </div>
-          <button className="user__login">
+          <button className="toggle__user">
             <GiHamburgerMenu />
           </button>
         </div>
